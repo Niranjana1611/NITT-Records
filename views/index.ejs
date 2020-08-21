@@ -1,0 +1,49 @@
+<html>
+<head>
+<link href="style.css" rel="stylesheet" type="text/css">
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+</head>	
+<body><br><br><br>
+	<img src="NITT_logo.png">
+	<br><h1 style="float: center">National institute of Technlogy<br>Tiruchirappalli</h1><br><br><br>
+	<center>
+		<form method="/get" action="/search">
+			<input type="text" name="rollnumber" maxlength="9" pattern="\d{1,9}||" placeholder="Roll Number">
+		</form>
+			<% if (typeof data != 'undefined') { %>
+			<% for(var i=0; i<data.length; i++) {%>
+			<form method="post" action="/go">
+				<div style="background-color: white; margin-left: 635px; margin-right: 650px;">
+					<input type="submit" name="roll"  value="<%= data[i] %>"></div>
+			</form>
+			<% } %>
+			<% } %>
+		<br>
+	</center><br><br>
+	<div style="margin-left: 200px; margin-right: 200px; border: solid black; background-color: white">
+		<br><br>
+		<section style="margin-left: 100px; margin-right: 100px"><h3 style="font-size: 20px; font-family: Arial; line-height: 1.6;">Hai Guyzz!</h3>
+		
+		<section style="margin-left: 50px; font-size: 15px; font-family: Arial; line-height: 1.6;x">This page will help you to 
+			<ol style="margin-left: 50px;">
+				<li>ADD the details of freashers</li>
+				<li>SEARCH the details of any student</li>
+				<li>MODIFY the already existing details of NITTians, and </li>
+				<li>You can also DELETE the record of a student</li>
+			</ol></section>
+		</section>
+		<br><br>
+	<form method="get" action="/add" style="margin-left: 350px; float: left">
+		<input type="submit" name="add" value="ADD">
+	</form>
+	<form method="get" action="/modify" style="margin-left: 100px; float: left">
+		<input type="submit" name="modify" value="MODIFY">
+	</form>
+	<form method="get" action="/delete" style="margin-left: 100px; float: left">
+		<input type="submit" name="delete" value="DELETE">
+	</form>
+	
+	<br><br><br>
+	</div>
+</body>
+</html>

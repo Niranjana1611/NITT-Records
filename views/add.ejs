@@ -1,0 +1,27 @@
+<html>
+<head>
+<link href="style.css" rel="stylesheet" type="text/css">
+
+</head>	
+<body><br><br><br>
+	<img src="NITT_logo.png">
+	<br><h1 style="float: center">National institute of Technlogy<br>Tiruchirappalli</h1><br><br><br>
+	<form method="get" action="/">
+		<input type="submit" name="home" value="HOME" style="float: right; margin-right: 300px">
+	</form><br>
+	
+	<div style="margin-left: 200px; margin-right: 200px; border: solid black; background-color: white; font-size: 20px; font-family: Arial; line-height: 1.6;x">
+	<br>
+		<center>Please enter the Details<br><br>
+		<form method="post" action="/added">
+			<input type="text" name="rollnumber" maxlength="9" pattern="\d{9}" placeholder="Roll Number" required><br>
+			<input type="text" name="fullmane" placeholder="Full Name" required><br>
+			<input type="text" name="department" maxlength="4" placeholder="Department" required><br>
+			<input type="text" name="batch" maxlength="4" pattern="\d{4}" placeholder="Batch" required><br>
+			<input type="text" name="phone" maxlength="10" pattern="\d{10}" placeholder="Phone Number" required><br><br>
+			<input type="submit" name="added" value="ADD">
+		</form>
+	</center>
+	</div>
+</body>
+</html>

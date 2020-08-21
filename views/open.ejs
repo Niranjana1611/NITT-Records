@@ -1,0 +1,26 @@
+<html>
+<head>
+<link href="style.css" rel="stylesheet" type="text/css">
+
+</head>	
+<body><br><br><br>
+	<img src="NITT_logo.png">
+	<br><h1 style="float: center">National institute of Technlogy<br>Tiruchirappalli</h1><br><br><br>
+	
+	<div style="margin-left: 200px; margin-right: 200px; border: solid black; background-color: white; font-size: 20px; font-family: Arial; line-height: 1.6;x">
+	<br>
+		<center>Please enter the Roll Number that you want to modify</center><br><br>
+		<form method="post" action="/update" style="margin-left: 350px">
+			<% for(var i=0; i<details.length; i++) {%>
+			Roll Number: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<%= details[i].rollnumber %><br>
+			Fullname: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<%= details[i].fullname %><br>
+			Department: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<%= details[i].dept %><br>
+			Batch: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<%= details[i].batch %><br>
+			Phone Number &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" name="mod_phone" maxlength="10" pattern="\d{10}" required><br><br>
+			<% } %>
+			<input type="submit" name="update" value="UPDATE" style="margin-left: 150px">
+		</form>
+	
+	</div>
+</body>
+</html>

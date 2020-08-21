@@ -1,0 +1,26 @@
+<html>
+<head>
+<link href="style.css" rel="stylesheet" type="text/css">
+
+</head>	
+<body><br><br><br>
+	<img src="NITT_logo.png">
+	<br><h1 style="float: center">National institute of Technlogy<br>Tiruchirappalli</h1><br><br><br>
+	<form method="get" action="/">
+		<input type="submit" name="home" value="HOME" style="float: right; margin-right: 300px">
+	</form><br>
+	<% for(var i=0; i<searched.length; i++) {%>
+		<div style="margin-left: 500px; margin-right: 500px; border: solid black; background-color: white; font-size: 20px; font-family: Arial; line-height: 1.6;x">
+		<br>
+		
+		<form method="post" action="/update" style="margin-left: 50px">
+			Roll Number: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<%= searched[i].rollnumber %><br>
+			Fullname: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<%= searched[i].fullname %><br>
+			Department: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<%= searched[i].dept %><br>
+			Batch: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<%= searched[i].batch %><br>
+			Phone Number &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<%= searched[i].phone %><br><br>
+		</form>
+	</div>
+	<% } %>
+</body>
+</html>

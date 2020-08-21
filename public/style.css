@@ -1,0 +1,75 @@
+* {padding: 0; margin: 0;}
+
+body{
+    background-color: cyan; 
+    -webkit-background-size: 50px 50px;
+    -moz-background-size: 50px 50px;
+    background-size: 50px 50px; 
+    background-image: 
+      -webkit-gradient(linear, 0 0, 100% 100%,
+      color-stop(.25, rgba(0, 183, 235, .3)), color-stop(.25, transparent),
+      color-stop(.5, transparent), color-stop(.5, rgba(0, 183, 235, .3)),
+      color-stop(.75, rgba(0, 183, 235, .3)), color-stop(.75, transparent),
+      to(transparent));
+    background-image: 
+      -webkit-linear-gradient(-45deg, rgba(0, 183, 235, .3) 25%, transparent 25%,
+      transparent 50%, rgba(0, 183, 235, .3) 50%, rgba(0, 183, 235, .3) 75%,
+      transparent 75%, transparent);
+    background-image: 
+      -moz-linear-gradient(-45deg, rgba(0, 183, 235, .3) 25%, transparent 25%,
+      transparent 50%, rgba(0, 183, 235, .3) 50%, rgba(0, 183, 235, .3) 75%,
+      transparent 75%, transparent);
+    background-image: 
+      -ms-linear-gradient(-45deg, rgba(0, 183, 235, .3) 25%, transparent 25%,
+      transparent 50%, rgba(0, 183, 235, .3) 50%, rgba(0, 183, 235, .3) 75%,
+      transparent 75%, transparent);
+    background-image: 
+      -o-linear-gradient(-45deg, rgba(0, 183, 235, .3) 25%, transparent 25%,
+      transparent 50%, rgba(0, 183, 235, .3) 50%, rgba(0, 183, 235, .3) 75%,
+      transparent 75%, transparent);
+    background-image: 
+      linear-gradient(-45deg, rgba(0, 183, 235, .3) 25%, transparent 25%,
+      transparent 50%, rgba(0, 183, 235, .3) 50%, rgba(0, 183, 235, .3) 75%,
+      transparent 75%, transparent);  
+}
+
+input[type="text"], input[type="password"], input[type="email"]
+{
+    padding: 8px 5px;
+    margin: 0 0 5px 5px;
+    min-width: 270px;
+    font-size: 1em;
+    background-color: #F5F5F5;
+    border: 1px solid #ccc;
+}
+input[type="submit"]
+{
+    padding: 7px 20px;
+    font-size: 1.06em;
+    background-color: #0796cf;
+    color: #fff;
+    border: 1px solid #0285b9;
+    cursor: pointer;
+    margin-top: 4px;
+}
+input[type="text"]:focus , input[type="password"]:focus , input[type="email"]:focus {
+    background-color:#fff;
+}
+input[type="submit"]:hover
+{
+    background-color: #0fa3dd;
+    border-color: 1px solid #098ec2;
+}
+
+form
+{
+    overflow: hidden;
+    margin-bottom: 10px;
+}
+
+img{
+	float: left;
+	margin-left: 100px;
+    height: 100px;
+    width: 100px;
+}

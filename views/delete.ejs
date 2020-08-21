@@ -1,0 +1,23 @@
+<html>
+<head>
+<link href="style.css" rel="stylesheet" type="text/css">
+
+</head>	
+<body><br><br><br>
+	<img src="NITT_logo.png">
+	<br><h1 style="float: center">National institute of Technlogy<br>Tiruchirappalli</h1><br><br><br>
+	<form method="get" action="/">
+		<input type="submit" name="home" value="HOME" style="float: right; margin-right: 300px">
+	</form><br>
+	
+	<div style="margin-left: 200px; margin-right: 200px; border: solid black; background-color: white; font-size: 20px; font-family: Arial; line-height: 1.6;x">
+	<br>
+		<center>Please enter the Roll Number that to be deleted<br><br>
+		<form method="post" action="/deleterno">
+			<input type="text" name="rollnumber" maxlength="9" pattern="\d{9}" placeholder="Roll Number" required><br>
+			<input type="submit" name="delete" value="DELETE">
+		</form>
+	</center>
+	</div>
+</body>
+</html>
