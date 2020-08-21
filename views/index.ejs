@@ -3,13 +3,29 @@
 <link href="style.css" rel="stylesheet" type="text/css">
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 </head>	
-<body><br><br><br>
+<body>
+	<script>
+        $(document).ready(function() {
+	        $('#rollnumber').keydown(function(event) {
+	        	$.ajax({
+	                url:'/search',
+	                data:{search:$('#rollnumber').val(),ajaxsend:true},
+	                method:'get',
+	                success:function(data){
+	                    $('#rollnumber').html(data); 
+	                }
+	            })
+	        });
+	    });
+	</script>
+	
+	<br><br><br>
 	<img src="NITT_logo.png">
 	<br><h1 style="float: center">National institute of Technlogy<br>Tiruchirappalli</h1><br><br><br>
 	<center>
-		<form method="/get" action="/search">
-			<input type="text" name="rollnumber" maxlength="9" pattern="\d{1,9}||" placeholder="Roll Number">
-		</form>
+		
+			<input type="text" name="rollnumber" maxlength="9" pattern="\d{1,9}||" placeholder="Roll Number" />
+		
 			<% if (typeof data != 'undefined') { %>
 			<% for(var i=0; i<data.length; i++) {%>
 			<form method="post" action="/go">
