@@ -62,7 +62,7 @@ router.post('/deleterno', (req, res) => {
     });
 })
 
-router.get('/search?:id',function(req,res){
+router.get('/search',function(req,res){
     
     let sql = `SELECT rollnumber from nittian where rollnumber like "%`+req.query.rollnumber+`%"`;
     
