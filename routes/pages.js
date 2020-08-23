@@ -70,9 +70,12 @@ router.get('/search',function(req,res){
         if (err) throw err;
         var data=[];
         for(let i=0;i<rows.length;i++){
+            (JSON.stringify(data));
+
             data.push(rows[i].rollnumber);
         }
         
+        //res.write
         res.render('index',{
             data: data
         });
